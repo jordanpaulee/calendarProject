@@ -1,6 +1,7 @@
 #ifndef extDateType_H
 #define extDateType_H
 #include <string>
+
 #include "dateType.h"
 
 
@@ -11,6 +12,10 @@ public:
     void setMonth(int);
     void printLongMonthYear();
     extDateType(int=1, int=1, int=1900);
+
+    int getMonth() const;
+    int getDay() const;
+    int getYear() const;
 
 private:
     std::string month;

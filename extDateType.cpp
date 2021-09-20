@@ -47,11 +47,23 @@ void extDateType::setMonth(int monthInt){
   
 };
 
+int extDateType::getMonth() const{
+  return dateType::getMonth();
+};
+
+int extDateType::getDay() const{
+  return dateType::getDay();
+};
+
+int extDateType::getYear() const{
+  return dateType::getYear();
+};
+
 void extDateType::printLongMonthYear(){
   int monthInt = dateType::getMonth();
   int year = dateType::getYear();
 
-  cout << months[monthInt] << " " << year << endl;
+  cout << setw(32) << months[monthInt] << " " << year << endl;
 };
 
 extDateType::extDateType(int month, int day, int year){
