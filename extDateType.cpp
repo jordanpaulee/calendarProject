@@ -63,7 +63,7 @@ void extDateType::printLongMonthYear(){
   int monthInt = dateType::getMonth();
   int year = dateType::getYear();
 
-  cout << setw(32) << months[monthInt] << " " << year << endl;
+  cout << months[monthInt] << " " << year << endl;
 };
 
 extDateType::extDateType(int month, int day, int year){

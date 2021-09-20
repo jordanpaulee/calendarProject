@@ -23,8 +23,7 @@ int calendarType::getYear() const{
 }
 
 void calendarType::printCalendar(){
-  //calendarType::firstDayOfMonth();
-  //DEVLEOPING
+  calendarType::printTitle();
   calendarType::printDates();
 }
 
@@ -34,7 +33,6 @@ calendarType::calendarType(int month, int year){
     dateType::setYear(year);
     dateType::setDay(1);
 };
-
 
 //private functions
 
@@ -58,7 +56,7 @@ dayType calendarType::firstDayOfMonth(){
 }
 
 void calendarType::printTitle(){
-  cout << setw(10);
+  cout << setw(31);
   extDateType::printLongMonthYear();
 }
 
@@ -92,7 +90,6 @@ void calendarType::printDates(){
   //cout << firstDay << "\n";
   
   cout << "\n";
-  extDateType::printLongMonthYear();
   
   for(int i=0; i<7; i++){
     cout << setw(7) << shortDay[i] << " ";
@@ -101,7 +98,7 @@ void calendarType::printDates(){
 
   for (int i=0; i<7; i++){
     if(firstDay == weekDays[i]){
-      remainingDays = i-1;
+      remainingDays = i;
       //cout << remainingDays << endl; 
       break;
     }
@@ -127,7 +124,5 @@ void calendarType::printDates(){
       day++;
     }
   }
-
-  
 
 }
